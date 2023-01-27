@@ -1,8 +1,16 @@
 package main
 
-import "net/http"
+import (
+	"log"
+	"os/exec"
+)
 
 func main() {
-	// Simple Http Server
-	http.ListenAndServe(":8080", nil)
+	cmd := exec.Command("present", "-http", ":80", "-orighost", "pre")
+
+	err := cmd.Run()
+
+	if err != nil {
+		log.Fatal(err)
+	}
 }
