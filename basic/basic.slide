@@ -1,0 +1,33 @@
+Learn Golang Basic
+Fundamental of Golang
+
+
+Muhammad Asnur Ramdani
+Backend GIS Programmer, DPMPTSP DKI Jakarta
+asnurramdhani12@gmail.com
+
+Google Developer Student Club - STTNF
+
+* Introduction
+.image ./images/golang-img.png
+
+* Sejarah Singkat
+- Bahasa pemrograman Go (atau Golang) dikembangkan oleh Google pada tahun 2007 oleh Robert Griesemer, Rob Pike, dan Ken Thompson. 
+- Tujuan utama dari pengembangan Go adalah untuk membuat bahasa yang sederhana, efisien, dan mudah digunakan untuk pengembangan aplikasi skala besar di lingkungan jaringan.
+- Bahasa ini dirilis sebagai open source pada tahun 2009 dan sejak itu telah menjadi populer di kalangan pengembang aplikasi web, sistem, dan aplikasi perangkat keras.
+
+*  Kenapa Kita Golang?
+- Performa yang baik
+- Sederhana dan mudah dipelajari
+- Skalabilitas dan Keamanan
+- Cross-Platform
+- Kebutuhan industri
+
+*  Fitur Golang
+- Garbage Collection
+- Concurrency
+- Type Inference
+
+* Hello World
+Syntax Dasar dan Sederhana untuk membuat program Hello World
+.play ./examples/hello.go
