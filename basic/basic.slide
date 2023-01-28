@@ -1,6 +1,7 @@
+#GDSC NF - Speaker Series (Backend)
+
 Go Programming Language
 Fundamental of Golang
-
 
 Muhammad Asnur Ramdani
 Backend GIS Programmer, DPMPTSP DKI Jakarta
@@ -53,6 +54,88 @@ Google Developer Student Club - STTNF
 * Hello World
 Syntax Dasar dan Sederhana untuk membuat program Hello World
 .play ./examples/hello.go
+
+* Tipe Data (Integer)
+.html ./html/integer.html
+
+* Tipe Data (Float)
+.html ./html/float.html
+
+* Tipe Data (Integer & Float - Contoh)
+Syntax Dasar dan Sederhana untuk membuat program Integer & Float
+
+  func main() {
+    fmt.println("one", 1) // integer
+    fmt.println("two", 2) // integer
+    fmt.println("one point six", 1.6) // float
+  }
+
+* Tipe Data (Boolean)
+Tipe data boolean hanya memiliki dua nilai yaitu *true* dan *false*
+
+  func main() {
+    fmt.println(true)
+    fmt.println(false)
+  }
+
+Contoh Lain Penggunaan Tipe Data Boolean
+
+  func main() {
+    var laki_laki bool = false
+    var perempuan bool = true
+
+    if perempuan {
+      fmt.println("Perempuan Selalu Benar")
+    }else if laki_laki {
+      fmt.println("Laki-laki Selalu Salah")
+    }
+  }
+
+* Tipe Data (Alias)
+Tipe data alias adalah tipe data yang memiliki nama lain dari tipe data aslinya. Tipe data alias ini digunakan untuk mempermudah penggunaan tipe data tersebut.
+
+  func main() {
+    type integer int
+    type float float64
+
+    var angka integer = 1
+    var desimal float = 1.6
+
+    fmt.println(angka)
+    fmt.println(desimal)
+  }
+Tipe data alias ini dari bawaaan Golang di antaranya :
+- byte = uint8
+- rune = int32
+- any = interface{}
+
+* Tipe Data (Alias - Contoh)
+Tipe data alias juga dapat digunakan untuk membuat tipe data baru. Contoh tipe data baru yang dibuat adalah tipe data *money* yang memiliki tipe data *int64*.
+
+  func main() {
+    type money int64
+
+    var uang money = 1000000
+    fmt.println(uang)
+  }
+
+* Tipe Data (String)
+- string adalah tipe data kumpulan karakter
+- Tipe data String di Go-Lang diwakili oleh kata kunci string
+- Nilai data string di Go-Lang selalu dimulai dengan *"*  (tanda kutip ganda) dan diakhiri dengan *"*  (tanda kutip ganda)
+- Untuk membuat string kosong, gunakan *""* (tanda kutip ganda kosong)
+
+  func main() {
+    var nama string = "Asnur"
+    var alamat string = "Jl. Cipinang Melayu"
+    var kota string = "Jakarta Timur"
+    var negara string = "Indonesia"
+
+    fmt.println(nama)
+    fmt.println(alamat)
+    fmt.println(kota)
+    fmt.println(negara)
+  }
 
 * Looping
 Syntax Dasar dan Sederhana untuk membuat program Looping
