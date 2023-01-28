@@ -31,3 +31,11 @@ Google Developer Student Club - STTNF
 * Hello World
 Syntax Dasar dan Sederhana untuk membuat program Hello World
 .play ./examples/hello.go
+
+* Looping
+Syntax Dasar dan Sederhana untuk membuat program Looping
+.play -edit ./examples/loop.go
+
+* Unit Testing
+Syntax Dasar dan Sederhana untuk membuat program Unit Testing
+.play ./examples/hello_test.go /^func TestHello/,/^}/
