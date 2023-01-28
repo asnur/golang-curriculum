@@ -28,6 +28,12 @@ Google Developer Student Club - STTNF
 - Concurrency
 - Type Inference
 
+*  Teknologi yang dikembangkan menggunakan Golang
+.html ./html/tech.html
+
+* Perusahaan yang menggunakan Golang
+.html ./html/company.html
+
 * Hello World
 Syntax Dasar dan Sederhana untuk membuat program Hello World
 .play ./examples/hello.go
