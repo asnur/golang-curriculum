@@ -1,4 +1,4 @@
-Learn Golang Basic
+Go Programming Language
 Fundamental of Golang
 
 
@@ -33,6 +33,22 @@ Google Developer Student Club - STTNF
 
 * Perusahaan yang menggunakan Golang
 .html ./html/company.html
+
+* Download & Install
+- Download Golang dan Install di [[https://golang.org][https://golang.org/dl/]].
+- pilih sesuai dengan OS yang digunakan dan ikuti langkah-langkahnya.
+- untuk memastikan Golang sudah terinstall, buka terminal dan ketikkan perintah berikut 
+
+	go version
+
+* Compile & Run
+- Untuk mengcompile buka terminal dan ketikkan perintah berikut
+	go build main.go
+- Untuk menjalankan program yang sudah di compile ketikkan perintah berikut
+	./main
+- Untuk menjalankan program tanpa compile, ketikkan perintah berikut
+	go run main.go
+.image ./images/compile.png
 
 * Hello World
 Syntax Dasar dan Sederhana untuk membuat program Hello World
