@@ -248,7 +248,47 @@ Ini adalah contoh komentar multi line
     fmt.Println(namaMahasiswa)
   }
 
+* Math (Operator Aritmatika)
+- Operator Aritmatika adalah operator yang digunakan untuk melakukan operasi matematika
+- Operator Aritmatika di Go-Lang diwakili oleh tanda +, -, *, /, %
 
+  func main() {
+    var a int = 10
+    var b int = 5
+    var c int = 0    
+    
+    c = a + b
+    fmt.Println("a + b = ", c)
+    c = a - b
+    fmt.Println("a - b = ", c)
+    c = a * b
+    fmt.Println("a * b = ", c)
+    c = a / b
+    fmt.Println("a / b = ", c)
+    c = a % b
+    fmt.Println("a % b = ", c)
+  }
+
+* Math (Augmented Assignments)
+- Augmented Assignments adalah operator yang digunakan untuk melakukan operasi matematika dan mengisi nilai ke variable
+- Augmented Assignments di Go-Lang diwakili oleh tanda +=, -=, *=, /=, %=
+
+  func main() {
+    var a int = 10
+    var b int = 5
+    var c int = 0    
+    
+    c += a
+    fmt.Println("c += a = ", c)
+    c -= a
+    fmt.Println("c -= a = ", c)
+    c *= a
+    fmt.Println("c *= a = ", c)
+    c /= a
+    fmt.Println("c /= a = ", c)
+    c %= a
+    fmt.Println("c %= a = ", c)
+  }
 
 * Looping
 Syntax Dasar dan Sederhana untuk membuat program Looping
