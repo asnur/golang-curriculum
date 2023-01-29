@@ -9,6 +9,9 @@ asnurramdhani12@gmail.com
 
 Google Developer Student Club - STTNF
 
+* 
+.html ./html/quotes.html
+
 * Introduction
 .image ./images/golang-img.png
 
@@ -136,6 +139,116 @@ Tipe data alias juga dapat digunakan untuk membuat tipe data baru. Contoh tipe d
     fmt.println(kota)
     fmt.println(negara)
   }
+
+* Comment (Single Line & Multi Line)
+komentar adalah baris kode yang tidak akan di eksekusi oleh program. Komentar digunakan untuk memberikan penjelasan atau catatan pada kode program.
+
+Ini adalah contoh komentar single line
+
+  func main() {
+    // ini adalah komentar
+    fmt.println("Hello World")
+  }
+
+Ini adalah contoh komentar multi line
+
+  func main() {
+    /* ini adalah komentar
+    yang terdiri dari beberapa baris */
+    fmt.println("Hello World")
+  }
+
+* Variable
+- Variable adalah wadah untuk menyimpan data
+- Variable di Go-Lang diwakili oleh kata kunci var
+- Nilai data variable di Go-Lang selalu dimulai dengan *var* dan tidak diakhiri dengan *;* (titik koma)
+
+  func main() {
+    var nama string = "Asnur"
+    var alamat string = "Jl. Cipinang Melayu"
+    var kota string = "Jakarta Timur"
+    var negara string = "Indonesia"
+
+    fmt.println(nama)
+    fmt.println(alamat)
+    fmt.println(kota)
+    fmt.println(negara)
+  }
+
+* Variable (Multiple)
+- Variable di Go-Lang juga dapat di deklarasikan secara bersamaan
+- Untuk mendeklarasikan variable secara bersamaan, gunakan tanda koma (,) untuk memisahkan variable
+
+  func main() {
+    var nama, alamat, kota, negara string = "Asnur", "Jl. Cipinang Melayu", "Jakarta Timur", "Indonesia"
+
+    fmt.println(nama)
+    fmt.println(alamat)
+    fmt.println(kota)
+    fmt.println(negara)
+  }
+
+* Constant (Single)
+- Constant adalah wadah untuk menyimpan data yang nilainya tidak dapat diubah
+- Constant di Go-Lang diwakili oleh kata kunci const
+
+  func main() {
+    const nama string = "Asnur"
+    const alamat string = "Jl. Cipinang Melayu"
+    const kota string = "Jakarta Timur"
+    const negara string = "Indonesia"
+
+    fmt.println(nama)
+    fmt.println(alamat)
+    fmt.println(kota)
+    fmt.println(negara)
+  }
+
+* Constant (Multiple)
+- Constant di Go-Lang juga dapat di deklarasikan secara bersamaan
+- Untuk mendeklarasikan constant secara bersamaan, gunakan tanda koma (,) untuk memisahkan constant
+
+  func main() {
+    const (
+      firstName string = "Asnur"
+      lastName string = "Ramdani"
+    )
+  
+    //Error
+    firstName = "Yusuf"
+    lastName = "Rijal"
+  }
+
+* Type Declaration (Single)
+- Type Declarations adalah kemampuan untuk membuat ulang tipe data baru dari tipe data yang ada
+- Type Declarations biasanya digunakan untuk membuat alias untuk tipe data yang ada. dengan tujuan agar lebih mudah dipahami
+
+  func main() {
+    type NIM string
+    var ktmNF NIM = "666"
+    
+    fmt.Println(ktmNF)
+    fmt.Println(NIM("999"))
+  }
+
+* Type Declaration (Multiple)
+- Type Declarations di Go-Lang juga dapat di deklarasikan secara bersamaan
+- Untuk mendeklarasikan Type Declarations secara bersamaan, gunakan tanda koma (,) untuk memisahkan Type Declarations
+
+  func main() {
+    type (
+      NIM string
+      Nama string
+    )
+    
+    var ktmNF NIM = "666"
+    var namaMahasiswa Nama = "Asnur"
+    
+    fmt.Println(ktmNF)
+    fmt.Println(namaMahasiswa)
+  }
+
+
 
 * Looping
 Syntax Dasar dan Sederhana untuk membuat program Looping
