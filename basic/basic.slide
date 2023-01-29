@@ -290,6 +290,10 @@ Ini adalah contoh komentar multi line
     fmt.Println("c %= a = ", c)
   }
 
+* Math (Unary Operator)
+- Unary Operator adalah operator yang digunakan untuk melakukan operasi matematika pada satu variable
+
+
 * Looping
 Syntax Dasar dan Sederhana untuk membuat program Looping
 .play -edit ./examples/loop.go
