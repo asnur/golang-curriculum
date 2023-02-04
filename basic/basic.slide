@@ -293,6 +293,88 @@ Ini adalah contoh komentar multi line
 * Math (Unary Operator)
 - Unary Operator adalah operator yang digunakan untuk melakukan operasi matematika pada satu variable
 
+  func main() {
+    var a = 1
+    a++
+    a++
+
+    //output a = 3
+    fmt.Println(a)
+  }
+
+* Comparison Operator
+- Comparison Operator adalah operator yang digunakan untuk melakukan perbandingan antara dua variable
+- Comparison Operator di Go-Lang diwakili oleh tanda ==, !=, >, <, >=, <=
+
+  func main() {
+    var person1 = "asnur"
+    var person2 = "yusuf"
+
+    var result bool = person1 == person2
+
+    //output result = false
+    fmt.Println(result)
+  }
+
+* Logical Operator
+- Logical Operator adalah operator yang digunakan untuk melakukan operasi logika antara dua variable dan diwakili oleh tanda *&&*, *||*, *!*
+
+  func main() {
+    var a = 10
+    var b = 20
+    var c = 30
+
+    var result bool = (a > b) && (a > c)
+
+    //output result = false
+    fmt.Println(result)
+
+    result = (a > b) || (a > c)
+
+    //output result = true
+    fmt.Println(result)
+
+    result = !(a > b)
+
+    //output result = true
+    fmt.Println(result)
+  }
+
+* Array 
+- Array adalah tipe data yang digunakan untuk menyimpan sekumpulan data dengan tipe data yang sama
+- Array di Go-Lang diwakili oleh tanda kurung siku ([])
+- Array di Go-Lang memiliki panjang tetap, artinya setelah array dibuat, panjang array tersebut tidak dapat diubah
+
+  func main() {
+    var names [3]string
+    names[0] = "Muhammad"
+    names[1] = "Asnur"
+    names[2] = "Ramdani"
+
+    fmt.Println(names[0]) // output : Muhammad
+    fmt.Println(names[1]) // output : Asnur
+    fmt.Println(names[2]) // output : Ramdani
+
+    //Length of Array
+    fmt.Println(len(names)) // output : 3
+  }
+
+* Slice
+Slice mirip dengan array, tetapi lebih kuat dan fleksibel.
+
+  func main() {
+    names := [5]string{"Abdurrahman", "Muhammad", "Asnur", "Ramdani", "Ziyad"}
+    myslice := names[1:4]
+
+    fmt.Println("My Name is = ",myslice) 
+    // output : My Name is =  [Muhammad Asnur Ramdani]
+
+  }
+
+* If Expression
+- If Expression adalah statement yang digunakan untuk melakukan percabangan
+- If Expression di Go-Lang diwakili oleh kata kunci *if*
+- 
 
 * Looping
 Syntax Dasar dan Sederhana untuk membuat program Looping
