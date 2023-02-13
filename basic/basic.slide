@@ -371,15 +371,114 @@ Slice mirip dengan array, tetapi lebih kuat dan fleksibel.
 
   }
 
+* Map
+- Map digunakan untuk menyimpan nilai data dalam pasangan key: value.
+
+  func main() {
+    var person = map[string]string{
+      "name":    "Asnur",
+      "address": "Jakarta",
+    }
+
+    fmt.Println(person["name"]) // output : Asnur
+    fmt.Println(person["address"]) // output : Jakarta
+  }
+
+
 * If Expression
 - If Expression adalah statement yang digunakan untuk melakukan percabangan
 - If Expression di Go-Lang diwakili oleh kata kunci *if*
-- 
 
-* Looping
-Syntax Dasar dan Sederhana untuk membuat program Looping
-.play -edit ./examples/loop.go
+  func main() {
+    var a = 10
+    var b = 20
 
-* Unit Testing
-Syntax Dasar dan Sederhana untuk membuat program Unit Testing
-.play ./examples/hello_test.go /^func TestHello/,/^}/
+    if a > b {
+      fmt.Println("a lebih besar dari b")
+    } else {
+      fmt.Println("a lebih kecil dari b")
+    }
+  }
+
+* Switch Expression
+- Switch Expression adalah statement yang digunakan untuk melakukan percabangan
+- Switch Expression di Go-Lang diwakili oleh kata kunci *switch*
+- Switch Expression di Go-Lang juga dapat digunakan untuk melakukan percabangan dengan kondisi yang lebih kompleks
+
+  func main() {
+    var point = 8
+
+    switch point {
+    case 8:
+      fmt.Println("Perfect")
+    case 7:
+      fmt.Println("Awesome")
+    default:
+      fmt.Println("Not Bad")
+    }
+  }
+
+* Looping (For)
+- Perulangan for digunakan untuk eksekusi blok kode tanpa henti, selama kondisi yang dijadikan acuan terpenuhi.
+
+  func main() {
+    number := 1	
+    for number < 10 {
+      fmt.Println("Loop to ", number)
+      number ++
+    }
+    // output : Loop to  1 - 10
+  }
+
+* Looping (For Statement)
+Perulangan for dapat mengambil hingga tiga pernyataan :
+- pernyataan inisialisasi : pernyataan yang dieksekusi sebelum perulangan dimulai
+- pernyataan kondisi : pernyataan yang dieksekusi sebelum setiap iterasi perulangan, Jika kondisi bernilai false, perulangan akan berhenti
+- pernyataan post : pernyataan yang dieksekusi setelah setiap iterasi perulangan
+
+  func main() {
+    for i := 1; i <= 10; i++ {
+      fmt.Println("Loop to ", i)
+    }
+    // output : Loop to  1 - 10
+  }
+
+* Looping (For Range)
+*For*range* dapat digunakan untuk me-looping tipe data seperti *array* dan *map*
+
+  func main() {
+    names := []string{"Muhammad", "Asnur", "Ramdhani"}
+    for index, name := range names {
+      fmt.Println("Index ", index, "= ", name)
+    }
+  }
+
+contoh menggunakan map
+
+  func main() {
+    person := map[string]string{"Asnur": "Bogor", "Ziyad": "Depok", "Yusuf": "Jakarta"}
+    for name, address := range person {
+      fmt.Println("Name :", name, " Address :", address)
+    }
+  }
+
+* Break and Continue
+- Break dan Continue adalah statement yang digunakan untuk menghentikan atau melanjutkan perulangan
+
+  func main() {
+    for i := 1; i <= 10; i++ {
+      if i == 5 {
+        continue
+      }else if i == 8 {
+        break
+      }
+
+      fmt.Println("Loop to ", i)
+      // output : Loop to  1 - 4 - 6 - 7
+    }
+  }
+
+
+* Challenge 1
+Buatlah program untuk menampilkan bilangan ganjil dan genap dari 1 - 10
+.play -edit ./examples/challange_1.go
