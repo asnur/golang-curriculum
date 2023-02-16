@@ -482,3 +482,179 @@ contoh menggunakan map
 * Challenge 1
 Buatlah program untuk menampilkan bilangan ganjil dan genap dari 1 - 10
 .play -edit ./examples/challange_1.go
+
+* Function
+- Function adalah sekumpulan statement yang digunakan untuk melakukan suatu tugas tertentu
+- Function di Go-Lang diwakili oleh kata kunci *func*
+- Function di Go-Lang dapat memiliki parameter dan return value
+
+  func main() {
+    sayHello("Asnur")
+  }
+
+  func sayHello(name string) {
+    fmt.Println("Hello", name)
+  }
+
+* Function Return Value
+- Function di Go-Lang dapat memiliki return value
+- Return value di Go-Lang dapat lebih dari satu
+
+  func main() {
+    result := calculate(10, 10)
+
+    fmt.Println(result)
+
+    var grade, pass = grade(90)
+
+    fmt.Println("Grade : ", grade)
+    fmt.Println("Pass : ", pass)
+  }
+
+  func calculate(value1 int, value2 int) int {
+    var result = value1 + value2
+
+    return result
+  }
+
+* Function Return Multiple Value 
+  func grade(value int) (string, bool) {
+    var grade string
+    var pass bool
+
+    if value > 90 {
+      grade = "A"
+      pass = true
+    } else if value > 80 {
+      grade = "B"
+      pass = true
+    } else if value > 70 {
+      grade = "C"
+      pass = true
+    } else if value > 60 {
+      grade = "D"
+      pass = true
+    } else {
+      grade = "E"
+      pass = false
+    }
+
+    return grade, pass
+  }
+
+* Function Recursion
+- Function Recursion adalah function yang memanggil dirinya sendiri
+
+  func main() {
+    var result = factorial(5)
+    fmt.Println(result)
+  }
+
+  func factorial(value int) int {
+    if value == 1 {
+      return 1
+    } else {
+      return value * factorial(value - 1)
+    }
+  }
+
+* Pointer
+- Pointer adalah variabel yang menyimpan alamat memori
+- Pointer di Go-Lang diwakili oleh tanda * (asterisk)
+- Untuk mendapatkan alamat memori dari sebuah variabel, gunakan operator & (ampersand)
+
+.play -edit ./examples/pointer.go
+
+* Struct
+- Tipe data yang digunakan untuk menyimpan kumpulan dari beberapa tipe data yang berbeda.
+- Struct digunakan untuk menyimpan data yang terkait dengan satu entitas tertentu, seperti objek dalam OOP.
+
+  type Person struct {
+    Name string
+    Address string
+    Age int
+  }
+
+  func main() {
+    var person = Person{"Asnur", "Bogor", 20}
+    fmt.Println(person.Name)
+    fmt.Println(person.Address)
+    fmt.Println(person.Age)
+  }
+
+* Struct Method
+- Method adalah function yang berada di dalam struct
+
+  type Person struct {
+      name string
+      age  int
+      address string
+  }
+
+  func (p *Person) setAddress(newAddress string) {
+      p.address = newAddress
+  }
+
+  func (p *Person) getAddress() string {
+      return p.address
+  }
+
+  func main() {
+      person := Person{name: "Asnur", age: 21, address: "Gatau"}
+      
+      person.setAddress("Bogor")
+      fmt.Println("Alamat:",person.getAddress())
+      // Output: Alamat: Bogor
+  }
+
+* Interface
+- Interface adalah kumpulan dari method-method yang harus diimplementasikan oleh sebuah struct
+- Interface di Go-Lang diwakili oleh kata kunci *interface*
+
+  type Person interface {
+    getName() string
+    setName(string)
+  }
+
+  type Student struct {
+    name string
+  }
+
+  type Teacher struct {
+    name string
+  }
+
+* Interface
+
+  func (s Student) getName() string {
+    return s.name
+  }
+
+  func (s Student) setName(name string) {
+    s.name = name
+  }
+
+
+  func (t Teacher) getName() string {
+    return t.name
+  }
+
+  func (t Teacher) setName(name string) {
+    t.name = name
+  }
+
+  func displayName(p Person) {
+    fmt.Println(p.getName())
+  }
+
+* Interface
+
+  func main() {
+    var student Student
+    student.setName("Abdurrahman Ziyad")
+    displayName(&student)
+
+    var teacher Teacher
+    teacher.setName("Muhammad Asnur")
+    displayName(&teacher)
+  }
